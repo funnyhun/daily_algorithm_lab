@@ -1,8 +1,8 @@
 import * as fs from "fs";
 
 // CommonJs in BOJ
-export function boj_input(dir) {
-  return require("fs").readFileSync(dir).toString().trim().split("\n");
+export function boj_input() {
+  return require("fs").readFileSync("/dev/stdin").toString().trim().split("\n");
 }
 
 // ESM
