@@ -34,9 +34,8 @@ function solve_set(input) {
   return res;
 }
 
-// 이때, 실제 연산 횟수는
-// solve_ary : 30 * 30(검색연산)
-// solve_set : 30(초기 생성) + 30(검색 연산)
+// solve_ary : O(N^2)
+// solve_set : O(N)
 // 만약, 문제의 학생 수 상한을 없앤다고 하면 더 커질 수 있는 차이
 
 // 문제 해결을 위해 자료구조에서 사용할 주요 연산이 무엇인지를 고민하자.
