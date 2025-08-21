@@ -17,8 +17,7 @@ function solve_1(input) {
   return `${input[maxIdx]}\n${maxIdx + 1}`;
 }
 
-// js 내장 메서드를 통해 가독성을 올릴 수 있지만,
-// idx를 찾는 n의 순회가 필요하다.
+// O(2n) -> O(N)
 function solve_2(input) {
   const max = Math.max(...input);
   return `${max}\n${input.indexOf(max) + 1}`;
