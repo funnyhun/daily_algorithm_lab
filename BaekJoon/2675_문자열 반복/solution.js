@@ -8,11 +8,13 @@ const input = local_input("./input.txt")
 // 주어진 문자열의 각 문자를 N 번만큼 중복시켜 출력하는 문제
 // 문자열의 불변성을 고려해서 배열에 문자열 누적 + join()
 function solve_1(input) {
+  const res = [];
   for (let cmd of input) {
     const [n, str] = cmd;
     const tmp = str.split("").map((e) => e.repeat(n));
-    console.log(tmp.join(""));
+    res.push(tmp.join(""));
   }
+  return res.join("\n");
 }
 
 test_funcs([input], [solve_1]);
