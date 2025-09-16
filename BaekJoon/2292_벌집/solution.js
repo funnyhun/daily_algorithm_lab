@@ -20,4 +20,13 @@ function solve_1(input) {
   return layer;
 }
 
-test_funcs([input], [solve_1]);
+function solve_2(input) {
+  const N = parseInt(input[0]);
+
+  // 입력 N을 넘지 않는 최대 육각수 도출
+  let layer = (1 + Math.sqrt(1 + 8 * N)) / 4;
+
+  return Math.floor(layer);
+}
+
+test_funcs([input], [solve_1, solve_2]);
