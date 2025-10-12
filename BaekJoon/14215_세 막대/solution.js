@@ -8,12 +8,17 @@ const input = local_input("./input.txt");
 // 2) 삼각형의 성립은 삼각 부등식에 기반한다
 // 3) 문제 조건에서 삼각형을 못만드는 경우는 없다.
 function solve_1(input) {
-  const stick = input[0].split(" ").map(Number).sort();
+  const stick = input[0]
+    .split(" ")
+    .map(Number)
+    .sort((a, b) => a - b);
 
   // 가장 큰 변을 도출하기 위해 삼각 부등식의 range 도출
-  const range = stick[0] + stick[1];
+  const max = stick[0] + stick[1];
 
-  return stick[0] + stick[1] + range - 1;
+  if (stick[2] < max) return max + stick[2];
+
+  return max + (max - 1);
 }
 
 test_funcs([input], [solve_1]);
